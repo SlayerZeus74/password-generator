@@ -1,0 +1,112 @@
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Karla:wght@500;600;700;800&display=swap');
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+
+
+body {
+    text-align: center;
+    background-color: #1C1C1C;  
+     font-family: 'Inter', sans-serif;
+    font-family: 'Karla', sans-serif;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 550px;
+    width: 550px;
+    border-radius: 0px;
+    margin: 10px auto;
+    background:  #1F2937;
+    border-radius: 10px;
+    color: white;
+    border: 5px ridge white;
+    box-shadow: 0px 0px 10px #2F3E53;
+
+}
+
+.container span{
+    color: #E11D48 ;
+    display: block;
+}
+
+.heading{
+     text-align: left;
+     margin-bottom: 10px;
+     font-family: 'Inter', sans-serif;
+     font-weight: 700;
+     font-size: 1.5rem;
+     /* color:  #F43F5E; */
+}
+
+.para{
+    margin-bottom: 51px;
+    color: #D5D4D8;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+
+}
+
+.section1{
+    display: flex;
+    margin: 115px 0 35px 52px;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 466px;
+    height: 246px;
+    border-bottom: 1px solid #2F3E53;
+}
+
+
+
+.btn{
+    height: 42px;
+     width: 191px;
+    border-radius: 6px;
+    padding: 9px 17px 9px 15px;
+    /* background-color: #4ADF86; */
+    background-color: #E11D48 ;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: white;
+    color: #E11D48;
+    border: 1px solid #E11D48;
+
+
+}
+
+.outputs{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 52px;
+    width: 466px;
+}
+
+.pwd{
+    height: 39px;
+    width: 211px;
+    border-radius: 6px;
+    background: #273549;
+    border: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    color: #E11D48;
+} 
