@@ -16,11 +16,12 @@ function generate(){
     generateElOne.textContent = pwdOne 
     console.log(generateElOne)      
 }
-for(let i = 0; i<12; i++){
+for(let i = 0; i<15; i++){
     let randomPwd = Math.floor(Math.random()*characters.length)
     pwdTwo += characters[randomPwd]
-    generateElTwo.textContent = pwdOne 
+    generateElTwo.textContent = pwdTwo
     console.log(generateElTwo)      
 }
    pwdOne=""
+   pwdTwo=""
 }
