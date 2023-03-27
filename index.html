@@ -23,13 +23,24 @@
       <button  class="btn" onclick="generate()">Generate passwords</button>
     </section>
     <div class="outputs">
-      <!-- <input type="text" class="pwd" value id="password-elOne">
-      <input type="text" class="pwd" value id="password-elTwo"> -->
+      <input type="text" class="pwd" value id="password-elOne" readonly>
+      <input type="text" class="pwd" value id="password-elTwo" readonly>
+<!-- 
 
       <h1 class="pwd" id="password-elOne"></h1>
-      <h1 class="pwd" id="password-elTwo"></h1>
+      <h1 class="pwd" id="password-elTwo"></h1> --> 
+     </div>
 
+     <div class="buttons"> 
+      <!-- <button  class="btn cpy" onclick="copyPwd(1)">Copy password</button>
+      <button  class="btn cpy" onclick="copyPwd(2)">Copy password</button> -->
+
+      <button  class="btn cpy" onclick="copyPwdOne()">Copy password</button>
+      <button  class="btn cpy" onclick="copyPwdTwo()">Copy password</button>
+
+      
     </div>
+      
   </div>
   <script src="script.js"></script>
 </body>

@@ -3,25 +3,59 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 
 
 
-generateElOne = document.getElementById("password-elOne")
-generateElTwo = document.getElementById("password-elTwo")
-
-let pwdOne = ""
-let pwdTwo = ""
+let generateElOne = document.getElementById("password-elOne")
+let generateElTwo = document.getElementById("password-elTwo")
 
 function generate(){
+    pwdOne=""
+    pwdTwo=""
     for(let i = 0; i<15; i++){
     let randomPwd = Math.floor(Math.random()*characters.length)
     pwdOne += characters[randomPwd]
-    generateElOne.textContent = pwdOne 
-    console.log(generateElOne)      
+    generateElOne.value = pwdOne 
+  
 }
 for(let i = 0; i<15; i++){
     let randomPwd = Math.floor(Math.random()*characters.length)
     pwdTwo += characters[randomPwd]
-    generateElTwo.textContent = pwdTwo
-    console.log(generateElTwo)      
+    generateElTwo.value = pwdTwo
+   
 }
-   pwdOne=""
-   pwdTwo=""
 }
+
+
+function copyPwdOne(){
+    const passwordEl = document.getElementById(`password-elOne`);
+    passwordEl.select();
+    passwordEl.setSelectionRange(0, 99999); // For mobile devices
+   
+      // Copy the text inside the text field
+     navigator.clipboard.writeText(passwordEl.value);
+   
+     // Alert the copied text
+     alert(`Copied the password: ` + passwordEl.value);
+}
+
+
+function copyPwdTwo(){
+    const passwordEl = document.getElementById(`password-elTwo`);
+    passwordEl.select();
+    passwordEl.setSelectionRange(0, 99999); // For mobile devices
+   
+      // Copy the text inside the text field
+     navigator.clipboard.writeText(passwordEl.value);
+   
+     // Alert the copied text
+     alert(`Copied the password: ` + passwordEl.value);
+}
+
+
+//Short-hand
+
+// function copyPwd(id) {
+//     const passwordEl = document.getElementById(`password-el${id}`);
+//     passwordEl.select();
+//     passwordEl.setSelectionRange(0, 99999); // For mobile devices
+//     navigator.clipboard.writeText(passwordEl.value);
+//     alert(`Password ${id} copied to clipboard: ${passwordEl.value}`);
+//   }
