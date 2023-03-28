@@ -2,20 +2,36 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 "/"];
 
 
+const alphanumeric = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+
+const symbols = ["~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"];
+
+
 
 let generateElOne = document.getElementById("password-elOne")
 let generateElTwo = document.getElementById("password-elTwo")
 
 let pwdLength = document.getElementById("user-input")
 
+
+
 function generate(){
-    pwdOne=""
-    pwdTwo=""
+    let pwdOne=""
+    let pwdTwo=""
+    
+    let seletedCharacters = alphanumeric
+
+
+    let symbolClick = document.getElementById("symbol").checked
+    if(symbolClick){
+        seletedCharacters = symbols
+    }
+    
     for(let i = 0; i<pwdLength.value; i++){
-    let randomPwd = Math.floor(Math.random()*characters.length)
-    let randomPwd1 = Math.floor(Math.random()*characters.length)
-    pwdOne += characters[randomPwd]
-    pwdTwo += characters[randomPwd1]
+    let randomPwd = Math.floor(Math.random()*seletedCharacters.length)
+    let randomPwd1 = Math.floor(Math.random()*seletedCharacters.length)
+    pwdOne += seletedCharacters[randomPwd]
+    pwdTwo += seletedCharacters[randomPwd1]
     generateElOne.value = pwdOne
     generateElTwo.value = pwdTwo 
 }   
