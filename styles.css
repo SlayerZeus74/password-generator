@@ -140,17 +140,11 @@ body {
 }
 
 #symbol{
-
+  margin-left:5px;
+  height: 20px;
+  width: 20px;
 }
 
-.sym{
-    background-color: #E11D48;
-    margin-left:5px;
-    height: 20px;
-    width: 20px;
-    border-radius: 10px;
-  
-}
 
 
 .pwd:focus{
