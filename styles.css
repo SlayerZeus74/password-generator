@@ -98,7 +98,15 @@ body {
     width: 466px;
 }
 
+.input{
+    margin-bottom: 20px;
+}
 
+#user-input{
+    width: 2.5rem;
+    text-align: center;
+    color: #E11D48;
+}
 
 .outputs{
     display: flex;

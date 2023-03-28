@@ -6,26 +6,25 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 let generateElOne = document.getElementById("password-elOne")
 let generateElTwo = document.getElementById("password-elTwo")
 
+let pwdLength = document.getElementById("user-input")
+
 function generate(){
     pwdOne=""
     pwdTwo=""
-    for(let i = 0; i<15; i++){
+    for(let i = 0; i<pwdLength.value; i++){
     let randomPwd = Math.floor(Math.random()*characters.length)
+    let randomPwd1 = Math.floor(Math.random()*characters.length)
     pwdOne += characters[randomPwd]
-    generateElOne.value = pwdOne 
-  
-}
-for(let i = 0; i<15; i++){
-    let randomPwd = Math.floor(Math.random()*characters.length)
-    pwdTwo += characters[randomPwd]
-    generateElTwo.value = pwdTwo
-   
-}
+    pwdTwo += characters[randomPwd1]
+    generateElOne.value = pwdOne
+    generateElTwo.value = pwdTwo 
+}   
 }
 
 
 function copyPwdOne(){
     const passwordEl = document.getElementById(`password-elOne`);
+    
     passwordEl.select();
     passwordEl.setSelectionRange(0, 99999); // For mobile devices
    
@@ -34,6 +33,7 @@ function copyPwdOne(){
    
      // Alert the copied text
      alert(`Copied the password: ` + passwordEl.value);
+ 
 }
 
 
@@ -49,7 +49,17 @@ function copyPwdTwo(){
      alert(`Copied the password: ` + passwordEl.value);
 }
 
-
+// function copyPwd(id) {
+//     const passwordEl = document.getElementById(`password-el${id}`);
+//     passwordEl.select();
+//     passwordEl.setSelectionRange(0, 99999); // For mobile devices
+  
+//     // Copy the text inside the text field
+//     navigator.clipboard.writeText(passwordEl.value);
+  
+//     // Alert the copied text
+//     alert(`Copied the password: ${passwordEl.value}`);
+//   }
 //Short-hand
 
 // function copyPwd(id) {
